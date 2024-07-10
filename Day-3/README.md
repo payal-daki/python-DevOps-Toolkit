@@ -41,15 +41,15 @@ Each keyword serves a specific purpose in Python programming, from defining cont
 
 ## Variables: Global vs Local 🌐
 
-  🌟 Variables in Python can be global or local in scope.
-  🔍 Global variables are accessible throughout the program, whereas local variables are limited to their defined scope, typically within a function.
-  🌐 Understanding variable scope is crucial for efficient and error-free Python programming.
+  -🌟 Variables in Python can be global or local in scope.
+  -🔍 Global variables are accessible throughout the program, whereas local variables are limited to their defined scope, typically within a function.
+  -🌐 Understanding variable scope is crucial for efficient and error-free Python programming.
 
 ## Naming Conventions 🐍
 
-🏷️ Use descriptive names for variables to enhance readability and maintainability.
-📛 Follow naming conventions like snake_case or CamelCase for multi-word variable names.
-🎯 Good naming conventions improve code clarity and signal professionalism to others reviewing your code.
+-🏷️ Use descriptive names for variables to enhance readability and maintainability.
+-📛 Follow naming conventions like snake_case or CamelCase for multi-word variable names.
+-🎯 Good naming conventions improve code clarity and signal professionalism to others reviewing your code.
 
 ## GitHub Interactive Practice 🚀
 
