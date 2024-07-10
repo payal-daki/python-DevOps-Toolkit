@@ -1,5 +1,5 @@
 
-```markdown
+
 # Day-5 | Command Line Args & Env Vars
 
 ## Command Line Arguments
@@ -47,5 +47,5 @@ Understanding how to effectively use command line arguments and environment vari
 ### Practice Exercise
 
 Implement a Python script that utilizes both command line arguments and environment variables. Ensure sensitive data is handled securely and follow the discussed best practices.
-```
+
 
