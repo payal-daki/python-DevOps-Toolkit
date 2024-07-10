@@ -54,7 +54,7 @@ if search:
 else:
     print("Pattern not found")
 
-#soilt
+#spilt
 import re
 
 text = "apple,banana,orange,grape"
