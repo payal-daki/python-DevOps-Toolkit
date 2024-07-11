@@ -67,10 +67,6 @@ if __name__ == "__main__":
 - **display_list function:** Displays the current items in the `shopping_list`.
 - **Exception Handling:** We use `try-except` blocks to catch and handle the `ValueError` that may occur when trying to remove an item that doesn't exist in the list.
 
-#### Interactive Elements
-- ✨ Emojis are used to highlight key sections and add visual interest.
-- 🛒 Real-life example of managing a shopping list makes the tutorial relatable.
-- 🚀 Python code snippets are provided for each operation, making it easy to understand and implement.
 
 #### Conclusion
 This example demonstrates how to effectively manage and manipulate lists in Python while gracefully handling potential errors that may arise during operations. By understanding and implementing exception handling, your Python programs can become more robust and user-friendly.
