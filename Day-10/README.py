@@ -1,4 +1,3 @@
-### Python Real-Time Example: List Operations and Exception Handling
 
 In this tutorial, we'll explore how to perform operations on lists in Python and handle exceptions effectively.
 
@@ -72,4 +71,4 @@ In this tutorial, we'll explore how to perform operations on lists in Python and
 - Try different operations and observe how Python handles exceptions.
 - Customize the list contents and exception scenarios to suit your learning needs.
 
----
+
