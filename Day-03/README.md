@@ -1,5 +1,4 @@
 
-
 Welcome to Day 3 of Python for DevOps! In today's class, we delve into essential concepts like keywords, variables, and best practices. Let's explore the key takeaways and dive into Python fundamentals.
 
 ## Keywords 🚀
