@@ -50,4 +50,4 @@ Ensure you have the following installed:
 
 ## Further Learning
 
-Explore additional functionalities and advanced techniques by watching the full video tutorial. Feel free to contribute and enhance this project!
+Explore additional functionalities and advanced techniques  Feel free to contribute and enhance this project!
