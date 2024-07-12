@@ -1,6 +1,5 @@
 
 
-
 ## Introduction
 
 Welcome to Day 2 of our Python tutorial series where we dive into strings and their handling functions. In this session, we'll explore practical examples and essential theory to strengthen your understanding of string operations in Python.
