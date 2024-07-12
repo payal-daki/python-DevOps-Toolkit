@@ -6,7 +6,7 @@ import json
 
 url = "https://ngivbt.atlassian.net/rest/api/3/issue"
 
-API_TOKEN = "key_id" 
+API_TOKEN = "" 
 
 auth = HTTPBasicAuth("mail_id", API_TOKEN)
 
@@ -36,7 +36,7 @@ payload = json.dumps( {
       "key": "KAN"
     },
     "issuetype": {
-      "id": "10013"
+      "id": "10012"
     },
     "summary": "First JIRA Ticket",
   },
