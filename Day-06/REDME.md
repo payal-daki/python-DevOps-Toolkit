@@ -1,5 +1,4 @@
 
-
 # Python Operators Explained
 
 Welcome to the Python Operators Explained repository! 🐍💻
