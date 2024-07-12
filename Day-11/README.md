@@ -2,11 +2,7 @@
 
 # Interacting with GitHub using Python
 
-This README provides a step-by-step guide on how to interact with GitHub's API using Python, as demonstrated in [Day-11 | Python For DevOps | Python Real Time UseCase with Dictionaries](https://www.youtube.com/watch?v=HvNU4dupQkg&list=PLdpzxOOAlwvKwTyYNJCUwGPvql0TrsPgv&index=12).
-
-## Video Overview
-
-📹 Watch the video [here](https://www.youtube.com/watch?v=HvNU4dupQkg&list=PLdpzxOOAlwvKwTyYNJCUwGPvql0TrsPgv&index=12) to follow along with the tutorial.
+This README provides a step-by-step guide on how to interact with GitHub's API using Python.
 
 ## Key Takeaways
 
