@@ -1,5 +1,4 @@
 
-
 # Day 1: Introduction to Python
 
 Welcome to Day 1 of learning Python
