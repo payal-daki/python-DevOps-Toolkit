@@ -19,4 +19,4 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           labels: 'Removed label'  # Replace with the label you want to detach
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.Jenkins}}
