@@ -1,0 +1,22 @@
+name: Detach Label from PR
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your target branch
+
+jobs:
+  remove-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Remove label from PR
+        uses: peter-evans/remove-label@v1
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          labels: 'your-label-name'  # Replace with the label you want to detach
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
