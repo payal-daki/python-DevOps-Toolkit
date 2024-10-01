@@ -17,6 +17,6 @@ jobs:
         uses: peter-evans/remove-label@v1
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          labels: 'your-label-name'  # Replace with the label you want to detach
+          labels: 'Removed label'  # Replace with the label you want to detach
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
