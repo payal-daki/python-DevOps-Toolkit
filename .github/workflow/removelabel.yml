@@ -1,22 +1,54 @@
-name: Detach Label from PR
+name: Remove outdated labels  # Name of the workflow
 
 on:
-  push:
-    branches:
-      - main  # Adjust to your target branch
+  pull_request:  # Trigger on pull request events
+    types:  # Specify types of pull request events to listen for
+      - closed  # Trigger when a pull request is closed
+  issues:  # Trigger on issue events
+    types:  # Specify types of issue events to listen for
+      - closed  # Trigger when an issue is closed
 
-jobs:
-  remove-label:
-    runs-on: ubuntu-latest
+permissions:  # Define permissions for the workflow
+  issues: write  # Allow the workflow to modify issue labels
+  pull-requests: write  # Allow the workflow to modify pull request labels
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+jobs:  # Define the jobs that will run in this workflow
+  remove-merged-pr-labels:  # Job for removing labels from merged pull requests
+    name: Remove merged pull request labels  # Display name for this job
+    if: github.event.pull_request.merged  # Run only if the pull request was merged
+    runs-on: ubuntu-latest  # Use the latest version of Ubuntu for the runner
+    steps:  # Define the steps for this job
+      - uses: mondeja/remove-labels-gh-action@v2  # Use a predefined action to remove labels
+        with:  # Provide input parameters to the action
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
+          labels: |  # List of labels to be removed from merged pull requests
+            awaiting reply  # Remove this label
+            changes requested  # Remove this label
+            duplicate  # Remove this label
+            in discussion  # Remove this label
+            invalid  # Remove this label
+            out of scope  # Remove this label
+            pending  # Remove this label
+            won't add  # Remove this label
 
-      - name: Remove label from PR
-        uses: peter-evans/remove-label@v1
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          labels: 'Removed label'  # Replace with the label you want to detach
-        env:
-          GITHUB_TOKEN: ${{ secrets.Jenkins}}
+  remove-closed-pr-labels:  # Job for removing labels from closed pull requests
+    name: Remove closed pull request labels  # Display name for this job
+    if: github.event_name == 'pull_request' && (! github.event.pull_request.merged)  # Run if the PR is closed and not merged
+    runs-on: ubuntu-latest  # Use the latest version of Ubuntu for the runner
+    steps:  # Define the steps for this job
+      - uses: mondeja/remove-labels-gh-action@v2  # Use a predefined action to remove labels
+        with:  # Provide input parameters to the action
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
+          labels: in discussion  # Remove this label from closed PRs that are not merged
+
+  remove-closed-issue-labels:  # Job for removing labels from closed issues
+    name: Remove closed issue labels  # Display name for this job
+    if: github.event.issue.state == 'closed'  # Run if the issue is closed
+    runs-on: ubuntu-latest  # Use the latest version of Ubuntu for the runner
+    steps:  # Define the steps for this job
+      - uses: mondeja/remove-labels-gh-action@v2  # Use a predefined action to remove labels
+        with:  # Provide input parameters to the action
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
+          labels: |  # List of labels to be removed from closed issues
+            in discussion  # Remove this label
+            pending  # Remove this label
