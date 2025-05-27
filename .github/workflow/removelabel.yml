@@ -46,7 +46,10 @@ jobs:  # Define the jobs that will run in this workflow
     if: github.event.issue.state == 'closed'  # Run if the issue is closed
     runs-on: ubuntu-latest  # Use the latest version of Ubuntu for the runner
     steps:  # Define the steps for this job
-      - uses: mondeja/remove-labels-gh-action@v2  # Use a predefined action to remove labels
+      - uses: mondeja/remove-labels-gh-action@v2  # Use a predefined action for remove label.
+
+
+      
         with:  # Provide input parameters to the action
           token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
           labels: |  # List of labels to be removed from closed issues
